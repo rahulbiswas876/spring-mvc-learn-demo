@@ -1,16 +1,20 @@
 package com.rahul.springmvc;
 
+
+
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.sun.istack.internal.NotNull;
 
 public class Customer {
 
 	private String firstName;
 	
-	@NotNull
+	@NotNull(message="is required")
 	@Size(min=1,message="is required")
 	private String lastName;
+	
+	
 	public String getFirstName() {
 		return firstName;
 	}
