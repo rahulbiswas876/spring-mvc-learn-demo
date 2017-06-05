@@ -5,6 +5,7 @@ package com.rahul.springmvc;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 
@@ -20,6 +21,9 @@ public class Customer {
 	@Min(value=0, message="must be greater than or equal to zero")
 	@Max(value=10,message="must be less than or equal to 10")
 	private int freePasses;
+	
+	@Pattern(regexp = "[0-9a-zA-Z]{5}",message="must be 5 characters/numbers")
+	private String postalCode;
 	
 	
 	public String getFirstName() {
@@ -40,11 +44,31 @@ public class Customer {
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
 	}
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+	
+	
 	
 	
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
