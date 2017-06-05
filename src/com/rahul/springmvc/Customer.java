@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import validation.CourseCode;
+
 
 public class Customer {
 
@@ -24,6 +26,9 @@ public class Customer {
 	
 	@Pattern(regexp = "[0-9a-zA-Z]{5}",message="must be 5 characters/numbers")
 	private String postalCode;
+	
+	@CourseCode
+	private String courseCode;
 	
 	
 	public String getFirstName() {
@@ -49,6 +54,12 @@ public class Customer {
 	}
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+	public String getCourseCode() {
+		return courseCode;
+	}
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 	
 	

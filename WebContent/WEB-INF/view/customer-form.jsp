@@ -32,6 +32,13 @@ Postal Code:
 
 <br><br>
 
+Course Code:
+<form:input path="courseCode"/>
+<form:errors path="courseCode"/>
+
+<br><br>
+
+
 <input type="submit" value="Submit" />
 
 <br><br>
