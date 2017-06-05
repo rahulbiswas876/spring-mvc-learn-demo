@@ -11,5 +11,9 @@
 Thank you <span>${customer.firstName} &nbsp; ${customer.lastName}</span> ! 
 <br><br>
 
+Free Passes :<span>${customer.freePasses}</span> 
+<br><br>
+
+
 </body>
 </html>
